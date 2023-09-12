@@ -6,7 +6,12 @@
 
 export function reverseArray(array) {
   // Your code goes here...
-
+  let reverse = [];
+  for (let i = 3; i > -1; i--) {
+    const element = array[i];
+    reverse.push(element);
+  }
+  return reverse;
 }
 
 

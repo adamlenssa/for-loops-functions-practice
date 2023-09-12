@@ -7,7 +7,15 @@
 
 export function flatArrays(array) {
   // Your code goes here...
-
+  let messyArray = array;
+  let flatArray = [];
+  for (let i = 0; i < messyArray.length; i++) {
+    const element = messyArray[i];
+    for (let x of element) {
+      flatArray.push(x)
+    }
+  }
+  return flatArray
 }
 
 

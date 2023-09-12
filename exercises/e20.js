@@ -7,7 +7,21 @@
 
 export function separateNamesWithAFromRest(array) {
   // Your code goes here...
-
+  let allNames = [[],[]]
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+    for (let j = 0; j < element.length; j++) {
+      const letter = element[j];
+      if (letter === 'a') {
+        allNames[0].push(element);
+        break;
+      } 
+      if (j === element.length - 1 && "a" !== letter) {
+        allNames[1].push(element)
+      }
+    }
+  }
+  return allNames;
 }
 
 
